@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubernetes-jenkins-astrovilla-app
+  name:  nodejs-app-sample
   labels:
-    app: kubernetes-jenkins-astrovilla
+    app:  nodejs-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: kubernetes-jenkins-astrovilla
+      app:  nodejs-app
   template:
     metadata:
       labels:
-        app: kubernetes-jenkins-astrovilla
+        app:  nodejs-app
     spec:
       containers:
-      - name: kubernetes-jenkins-astrovilla
+      - name:  nodejs-app
         image: 18.217.12.100:8021/nodejs-app:1
         ports:
         - containerPort: 4444
